@@ -17,7 +17,7 @@ export default function Login({ handleChange }) {
                 <InputText placeholder="Email" setText={setEmail}/>
 
                 <div className="flex justify-between items-center">
-                    <InputPassword placeholder="Contraseña" setPassword={setPassword}/>
+                    <InputPassword getClick=" "placeholder="Contraseña" setPassword={setPassword}/>
                 </div>
             </div>
             <div className="flex justify-center">

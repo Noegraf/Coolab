@@ -6,9 +6,21 @@ export default function Register({ handleChange }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [verification, setVerification] = useState(false);
 
-    const disabled = email !== "" && password !== "" && confirmPassword !== "";
+    const mayuscula = /[A-Z]/.test(password);
+    const minCaracteres = password.length >= 6;
+    const minuscula = /[a-z]/.test(password);
+    const numero = /\d/.test(password);
+    const especial = /[^a-zA-Z0-9]/.test(password);
+    const verificado = mayuscula && minCaracteres && minuscula && numero && especial;
+
+    const disabled = email !== "" && password !== "" && confirmPassword !== "" && password === confirmPassword && verificado;
     
+    function getClick(){
+        setVerification(!verification);
+    }
+
     return (
         <form action="" className="w-3/4">
             <div>
@@ -18,17 +30,38 @@ export default function Register({ handleChange }) {
                 <InputText placeholder="Email" setText={setEmail}/>
                 <div className="mb-3">
                     <div className="flex justify-between items-center mb-2">
-                        <InputPassword placeholder="Contraseña" setPassword={setPassword}/>
+                        <InputPassword getClick={getClick} placeholder="Contraseña" setPassword={setPassword}/>
                     </div>
-                    <span
-                    className="text-xs"
-                    >
-                        6 caracteres, una mayúscula, una minúscula, un número y un carácter especial
-                    </span>
+                    {verification && 
+                        <>
+                            <div>
+                                <span className={`text-xs ${minCaracteres ? "text-verificationColor" : ""}`}>
+                                    6 caracteres,{" "} 
+                                </span>
+                                <span className={`text-xs ${mayuscula ? "text-verificationColor" : ""}`}>
+                                    una mayúscula,{" "} 
+                                </span>
+                                <span className={`text-xs ${minuscula ? "text-verificationColor" : ""}`}>
+                                    una minúscula, {" "}
+                                </span>
+                                <span className={`text-xs ${numero ? "text-verificationColor" : ""}`}>
+                                    un número {" "}
+                                </span>
+                                <span className="text-xs">
+                                    y {" "}
+                                </span>
+                                <span className={`text-xs ${especial ? "text-verificationColor" : ""}`}>
+                                    un carácter especial
+                                </span>
+                            </div>
+                        </>
+                    }
+                    
+                    
                 </div>
 
                 <div className="flex justify-between items-center">
-                    <InputPassword placeholder="Confirmar contraseña" setPassword={setConfirmPassword}/>
+                    <InputPassword getClick={getClick} placeholder="Confirmar contraseña" setPassword={setConfirmPassword}/>
                 </div>
             </div>
             <div className="flex justify-center">

@@ -14,6 +14,7 @@ module.exports = {
         borderSubmit: "#D5D2FF",
         containerSubmit: "#DBD9DE",
         colorSubmit: "#F7F7F8",
+        verificationColor: "#75CA5E"
       },
     },
   },

@@ -1,0 +1,14 @@
+.password-container{
+    border-bottom: #BAB8C1 1px solid;
+}
+.password-container .eye{
+    animation: password 1s ease-in-out forwards;
+    overflow: hidden;
+    opacity: 0;
+}
+
+@keyframes password{
+    100%{
+        opacity: 1;
+    }
+}

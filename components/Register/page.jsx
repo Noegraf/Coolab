@@ -34,7 +34,7 @@ export default function Register({ handleChange }) {
                     </div>
                     {verification && 
                         <>
-                            <div>
+                            <div className="mt-1 message-verification">
                                 <span className={`text-xs ${minCaracteres ? "text-verificationColor" : ""}`}>
                                     6 caracteres,{" "} 
                                 </span>

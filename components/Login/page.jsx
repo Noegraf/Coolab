@@ -1,4 +1,5 @@
 "use client"
+import "./style.css"
 import { useState } from "react";
 import InputPassword from "../InputPassword/page";
 import InputText from "../InputText/page";
@@ -9,7 +10,7 @@ export default function Login({ handleChange }) {
     const disabled = email !== "" && password !== "";
 
     return(
-        <form action="" className="w-3/4">
+        <form action="" className="w-3/4 animation">
             <div>
                 <h1 className="text-3xl font-extrabold text-h1">Ingresar</h1>
             </div>

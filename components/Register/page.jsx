@@ -22,14 +22,14 @@ export default function Register({ handleChange }) {
     }
 
     return (
-        <form action="" className="w-3/4">
+        <form action="" className="w-3/4 animation">
             <div>
                 <h1 className="text-3xl font-extrabold text-h1">Ingresar</h1>
             </div>
             <div className="flex flex-col mb-5 mt-5">
                 <InputText placeholder="Email" setText={setEmail}/>
                 <div className="mb-3">
-                    <div className="flex justify-between items-center mb-2">
+                    <div className="flex justify-between items-center">
                         <InputPassword getClick={getClick} placeholder="Contraseña" setPassword={setPassword}/>
                     </div>
                     {verification && 

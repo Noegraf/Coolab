@@ -1,0 +1,19 @@
+.animation{
+    animation: animation 1s ease-in-out forwards;
+    overflow: hidden;
+}
+
+@keyframes animation{
+    0%{
+        opacity: 0;
+        margin-left: 850px;
+    }
+
+    60%{
+        margin-left: 0px;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}

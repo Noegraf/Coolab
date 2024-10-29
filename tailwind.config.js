@@ -16,6 +16,12 @@ module.exports = {
         colorSubmit: "#F7F7F8",
         verificationColor: "#75CA5E"
       },
+      height: {
+        150: "150px",
+      },
+      width:{
+        150: "150px",
+      }
     },
   },
   plugins: [],

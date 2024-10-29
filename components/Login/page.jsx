@@ -23,9 +23,9 @@ export default function Login({ handleChange }) {
             </div>
             <div className="flex justify-center">
                 <div className="flex justify-evenly mb-5 w-2/3">
-                    <img className="cursor-pointer" src="/images/logos/github.png" alt="" />
-                    <img className="cursor-pointer" src="/images/logos/google.png" alt="" />
-                    <img className="cursor-pointer" src="/images/logos/linkedin.png" alt="" />
+                    <img className="cursor-pointer max-sm:w-9 max-sm:h-9" src="/images/logos/github.png" alt="" />
+                    <img className="cursor-pointer max-sm:w-9 max-sm:h-9" src="/images/logos/google.png" alt="" />
+                    <img className="cursor-pointer max-sm:w-9 max-sm:h-9" src="/images/logos/linkedin.png" alt="" />
                 </div>
             </div>
             

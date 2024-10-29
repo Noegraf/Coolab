@@ -9,7 +9,7 @@ export default function InputPassword({ placeholder, setPassword, getClick }) {
         }
     }
     return(
-        <div className="flex justify-between items-center w-full password-container">
+        <div className="flex justify-between items-center w-full password-container bg-white pr-2">
             <input 
                 className="outline-none  pt-3 pb-3 pl-2 pr-2 w-full" 
                 placeholder={placeholder} 

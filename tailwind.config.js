@@ -14,7 +14,11 @@ module.exports = {
         borderSubmit: "#D5D2FF",
         containerSubmit: "#DBD9DE",
         colorSubmit: "#F7F7F8",
-        verificationColor: "#75CA5E"
+        verificationColor: "#75CA5E",
+        backgroundFirstTime: "#F2F2FF",
+        lila: "#CF80FF",
+        blackLila: "#1F076E",
+        turquesa: "#9280FF",
       },
       height: {
         150: "150px",

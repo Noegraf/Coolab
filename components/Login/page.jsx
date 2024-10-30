@@ -3,6 +3,7 @@ import "./style.css"
 import { useState } from "react";
 import InputPassword from "../InputPassword/page";
 import InputText from "../InputText/page";
+import Link from "next/link";
 export default function Login({ handleChange }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -30,13 +31,18 @@ export default function Login({ handleChange }) {
             </div>
             
             <div className="flex flex-col items-center">
-                <button 
-                type="submit"
-                disabled={!disabled}
-                className={`pt-3 pb-3 pl-4 pr-4 rounded-lg transition-all duration-500 ${disabled ? "border-4 border-borderSubmit" : "border-4 border-containerSubmit"} ${disabled ? "bg-logo" : "bg-containerSubmit"} text-colorSubmit`}
+                <Link 
+                href="/firstTime"
                 >
-                    Ingresar
-                </button>
+                    <button 
+                    type="submit"
+                    disabled={!disabled}
+                    className={`pt-3 pb-3 pl-4 pr-4 rounded-lg transition-all duration-500 ${disabled ? "border-4 border-borderSubmit" : "border-4 border-containerSubmit"} ${disabled ? "bg-logo" : "bg-containerSubmit"} text-colorSubmit`}
+                    >
+                        Ingresar
+                    </button>
+                </Link>
+                
                 <span 
                 className="block text-xs mt-3 font-medium cursor-pointer"
                 onClick={() => handleChange()}

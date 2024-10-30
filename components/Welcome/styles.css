@@ -1,0 +1,40 @@
+article{
+    animation: animation 1s ease-in-out forwards;
+    
+}
+
+.movement{
+    animation: movement 1.5s ease-in-out forwards;
+    overflow: hidden;
+}
+
+@keyframes animation{
+    0%{
+        opacity: 0;
+        margin-left: 850px;
+    }
+
+    60%{
+        margin-left: 0px;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes movement {
+    0%{
+        opacity: 0;
+        margin-left: 1000px;
+        margin-top: 1000px;
+    }
+    60%{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}

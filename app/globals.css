@@ -53,12 +53,7 @@ table {
 	border-spacing: 0;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 body{
+	box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }

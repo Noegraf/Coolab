@@ -9,7 +9,7 @@ export default function FirstTime() {
                 alt="" 
                 className=""
                 />
-                <h1 className="text-blackLila font-bold text-3xl">Primer ingreso</h1>
+                <h1 className="text-blackLila font-bold text-3xl max-sm:text-2xl">Primer ingreso</h1>
                 <div className="bg-containerSubmit p-2 rounded-lg">
                     <img src="/images/person.png" alt="" />
                 </div>
@@ -17,10 +17,7 @@ export default function FirstTime() {
             <img 
             src="/images/ilustraciones.png" 
             alt="" 
-            className="absolute"
-            style={{
-                left: "5%"
-            }}
+            className="absolute sm:left-[5%] max-sm:bottom-[0px]"
             />
 
             <Welcome />

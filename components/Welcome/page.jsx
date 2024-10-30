@@ -34,7 +34,7 @@ export default function Welcome() {
     },[complete])
 
     return (
-        <article className="bg-white w-2/5 h-3/5 flex flex-col items-center justify-center pt-7 pl-7 pr-7 pb-7 z-10 rounded-2xl shadow-xl">
+        <article className="bg-white w-2/5 h-[450px] flex flex-col items-center justify-center pt-7 pl-7 pr-7 pb-7 z-10 rounded-2xl shadow-xl max-sm:w-[90vw]">
             {finished == false && (
                 <div>
                     <h1 className="text-3xl font-extrabold text-center text-h1 mb-6">
@@ -113,9 +113,9 @@ export default function Welcome() {
             
             
             {finished && (
-                <div className="flex flex-col items-center movement">
-                    <h1 className="text-6xl font-extrabold text-center text-h1 mb-6"><b className="text-turquesa">Cool</b>abora!</h1>
-                    <img src="/images/finished.png" alt="" />
+                <div className="flex flex-col items-center">
+                    <h1 className="text-6xl font-extrabold text-center text-h1 mb-6 max-sm:text-5xl max-lg:text-5xl max-md:text-[2.6rem] movement-right"><b className="text-turquesa">Cool</b>abora!</h1>
+                    <img className="movement"src="/images/finished.png" alt="" />
                 </div>
             )}
         </article>

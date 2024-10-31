@@ -3,7 +3,7 @@ import Data from "../../data/roles.json";
 import Dropdown from "../Dropdown/page";
 import { useEffect, useState } from "react";
 import "./styles.css";
-export default function Welcome() {
+export default function Welcome({  animationDraw }) {
     const [role, setRole] = useState("");
     const [disabled, setDisabled] = useState(true);
     const [disabledButton, setDisabledButton] = useState(true);
@@ -11,6 +11,7 @@ export default function Welcome() {
     const [src, setSrc] = useState("/images/pieza.png");
     const [opacity, setOpacity] = useState(0);
     const [finished, setFinished] = useState(false);
+    const [animation, setAnimation] = useState("");
 
     useEffect(() =>{
         if (complete){
@@ -30,11 +31,16 @@ export default function Welcome() {
             setTimeout(() => {
                 setFinished(true)
             }, 2700)
+
+            setTimeout(() => {
+                setAnimation("bottom")
+                animationDraw("left")
+            }, 5000)
         }
     },[complete])
 
     return (
-        <article className="bg-white w-2/5 h-[450px] flex flex-col items-center justify-center pt-7 pl-7 pr-7 pb-7 z-10 rounded-2xl shadow-xl max-sm:w-[90vw]">
+        <article className={`bg-white w-2/5 h-[450px] flex flex-col items-center justify-center pt-7 pl-7 pr-7 pb-7 z-10 rounded-2xl shadow-xl max-sm:w-[90vw] ${animation}`}>
             {finished == false && (
                 <div>
                     <h1 className="text-3xl font-extrabold text-center text-h1 mb-6">
@@ -113,7 +119,7 @@ export default function Welcome() {
             
             
             {finished && (
-                <div className="flex flex-col items-center">
+                <div className={`flex flex-col items-center`}>
                     <h1 className="text-6xl font-extrabold text-center text-h1 mb-6 max-sm:text-5xl max-lg:text-5xl max-md:text-[2.6rem] movement-right"><b className="text-turquesa">Cool</b>abora!</h1>
                     <img className="movement"src="/images/finished.png" alt="" />
                 </div>

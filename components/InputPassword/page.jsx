@@ -17,6 +17,7 @@ export default function InputPassword({ placeholder, setPassword, getClick }) {
                 onFocus={handleClick}
                 onBlur={handleClick}
                 onChange={(e) => setPassword(e.target.value)}
+                onPaste={(e) => e.preventDefault()}
             />
             
             <img

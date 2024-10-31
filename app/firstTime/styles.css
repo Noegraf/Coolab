@@ -1,0 +1,13 @@
+.left{
+    animation: left 1.5s ease-in-out forwards;
+}
+
+
+@keyframes left {
+    0%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: -850px;
+    }
+}

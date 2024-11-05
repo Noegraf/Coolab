@@ -2,7 +2,7 @@ import InputText from "../InputText/page";
 import InputMail from "../InputMail/page";
 import { useState } from "react";
 
-export default function Profile() {
+export default function Profile( {setChange} ) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [github, setGithub] = useState("");
@@ -10,7 +10,7 @@ export default function Profile() {
     const [linkedin, setLinkedin] = useState("");
 
     return (
-        <section className="w-[700px] bg-white flex justify-between px-10 py-10 shadow-xl">
+        <section className="w-[700px] max-sm:max-w-xs bg-white flex justify-between max-sm:flex-col max-sm:items-center px-10 py-10 max-sm:py-5 shadow-xl rounded-lg">
             <div>
                 <div className="relative">
                     <img src="/images/cara.png" alt="" />
@@ -18,7 +18,7 @@ export default function Profile() {
                 </div>
                 
             </div>
-            <div className="flex flex-col w-[350px]">
+            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col w-[350px] max-sm:w-full">
                 <InputText
                 placeholder="Nombre"
                 setText={setName}
@@ -40,7 +40,25 @@ export default function Profile() {
                 placeholder="Linkedin"
                 setText={setLinkedin}
                 />
-            </div>
+
+                <div className="flex items-center justify-end mt-10 ">
+                    <button 
+                    type="submit"
+                    className="bg-logo text-white px-5 py-3 flex items-center rounded-lg transition-all duration-300 ease-in-out"
+                    onClick={() => {
+                        setChange[0]("Equipo");
+                        setChange[1](true);
+                    }}
+                    >
+                        <span>
+                            Continuar
+                        </span>
+                        <img className="w-4 ml-2" src="/images/arrow.png" alt="" />
+                    </button>
+                </div>
+                
+
+            </form>
         </section>
     );
 }

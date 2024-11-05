@@ -1,6 +1,6 @@
 export default function CardTask({ isInEquipo, isInPerfil, isInProyectos }){
     return(
-        <section className="mr-7">
+        <section className="mr-7 max-sm:mr-0">
 
             <article className="shadow-lg mb-10 rounded-lg">
                 <div className="flex items-center bg-lila rounded-t-lg py-2 px-4">

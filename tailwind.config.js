@@ -25,7 +25,7 @@ module.exports = {
       },
       width:{
         150: "150px",
-      }
+      },
     },
   },
   plugins: [],

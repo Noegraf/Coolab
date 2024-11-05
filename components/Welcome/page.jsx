@@ -33,14 +33,14 @@ export default function Welcome({  animationDraw }) {
             }, 2700)
 
             setTimeout(() => {
-                setAnimation("bottom")
+                setAnimation("bottom overflow-x-hidden")
                 animationDraw("left")
             }, 5000)
         }
     },[complete])
 
     return (
-        <article className={`bg-white w-2/5 h-[450px] flex flex-col items-center justify-center pt-7 pl-7 pr-7 pb-7 z-10 rounded-2xl shadow-xl max-sm:w-[90vw] ${animation}`}>
+        <article className={`bg-white max-w-2/5 max-h-[450svh] flex flex-col items-center justify-center pt-7 pl-7 pr-7 pb-7 z-10 rounded-2xl shadow-xl max-sm:max-w-[90svw] ${animation}`}>
             {finished == false && (
                 <div>
                     <h1 className="text-3xl font-extrabold text-center text-h1 mb-6">

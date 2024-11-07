@@ -1,6 +1,6 @@
 export default function CardTask({ isInEquipo, isInPerfil, isInProyectos }){
     return(
-        <section className="mr-7 max-sm:mr-0">
+        <section className="mr-7 max-sm:mr-0 max-w-[450px]">
 
             <article className="shadow-lg mb-10 rounded-lg">
                 <div className="flex items-center bg-lila rounded-t-lg py-2 px-4">
@@ -53,7 +53,7 @@ export default function CardTask({ isInEquipo, isInPerfil, isInProyectos }){
                         border: "1px solid #BAB8C1",
                     }}
                     >
-                        <img src="/images/checkBlack.png" alt="" />
+                        {isInProyectos ? <img className="w-[15px]" src="/images/check.png" alt="" /> : <img src="/images/checkBlack.png" alt=""/>}
                     </div>
                     <span className="text-h1">Ya seleccionamos el proyecto</span>
                 </div>

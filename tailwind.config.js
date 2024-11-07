@@ -18,6 +18,7 @@ module.exports = {
         backgroundFirstTime: "#F2F2FF",
         lila: "#CF80FF",
         blackLila: "#1F076E",
+        lilatext: "#AA2DF0",
         turquesa: "#9280FF",
       },
       height: {

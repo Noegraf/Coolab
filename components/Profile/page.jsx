@@ -10,7 +10,7 @@ export default function Profile( {setChange} ) {
     const [linkedin, setLinkedin] = useState("");
 
     return (
-        <section className="w-[700px] max-sm:max-w-xs bg-white flex justify-between max-sm:flex-col max-sm:items-center px-10 py-10 max-sm:py-5 shadow-xl rounded-lg">
+        <section className="w-[800px] max-sm:max-w-xs bg-white flex justify-between max-sm:flex-col max-sm:items-center px-10 py-10 max-sm:py-5 shadow-xl rounded-lg">
             <div>
                 <div className="relative">
                     <img src="/images/cara.png" alt="" />

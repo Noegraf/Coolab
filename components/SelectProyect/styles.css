@@ -2,6 +2,16 @@
     animation: animation 1s ease-in-out forwards;
 }
 
+.animationBottom{
+    animation: animationBottom 1s ease-in-out forwards;
+}
+
+.gap-5{
+    scrollbar-width: thin;
+    scroll-padding: 10px;
+    scrollbar-color: #BAB8C1 #FFFFFF;
+}
+
 @keyframes animation{
     0%{
         opacity: 0;
@@ -10,5 +20,16 @@
     100%{
         margin-top: 0px;
         opacity: 1;
+    }
+}
+
+@keyframes animationBottom{
+    0%{
+        opacity: 1;
+        margin-top: 0px;
+    }
+    100%{
+        margin-top: 850px;
+        opacity: 0;
     }
 }

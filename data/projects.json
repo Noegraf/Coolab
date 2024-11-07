@@ -1,0 +1,34 @@
+[{
+    "titulo": "Landing Page para una Agencia Creativa",
+    "descripcion": "El objetivo es desarrollar una landing page para una agencia creativa ficticia que ofrezca servicios de diseño gráfico, desarrollo web y marketing digital. La landing page debe ser atractiva, responsiva y tener un diseño moderno.",
+    "objetivos": [
+        "Diseño Responsivo: La landing page debe ser completamente adaptable a dispositivos móviles, tablets y escritorios.",
+        "Componentes Visuales: Crear componentes visuales atractivos, como sliders de imágenes, testimonios y una galería de trabajos previos.",
+        "Formulario de Contacto: Incluir un formulario que permita a los usuarios contactarse con la agencia (el Backend Developer podría integrar el envío de mensajes si es necesario).",
+        "Optimización para SEO: Incluir metadatos y estructura básica de SEO para que el sitio sea encontrable por motores de búsqueda.",
+        "Animaciones Simples: Añadir animaciones sutiles para mejorar la experiencia del usuario, como transiciones al hacer hover sobre elementos."
+    ]
+},
+{
+    "titulo": "To-Do App Colaborativa",
+    "descripcion": "Desarrollar una aplicación sencilla de tareas (To-Do) que permita a los usuarios crear y gestionar listas de tareas colaborativas. El proyecto tendrá tanto una parte frontend (visual) como un backend básico (para guardar las tareas en una base de datos).",
+    "objetivos": [
+        "Interfaz Limpia y Funcional: La aplicación debe permitir a los usuarios agregar, editar, eliminar y marcar tareas como completadas.",
+        "Colaboración en Tiempo Real: Las listas de tareas deben poder compartirse con otros usuarios en tiempo real.",
+        "Gestión de Usuarios: Incluir una funcionalidad básica de registro e inicio de sesión para los usuarios.",
+        "Almacenamiento de Datos: Guardar las tareas en una base de datos para que sean persistentes y estén disponibles al volver a iniciar sesión.",
+        "Notificaciones o Alertas: Añadir una opción de notificación para alertar a los usuarios sobre tareas urgentes o compartidas."
+    ]
+},
+{
+    "titulo": "App de Recetas Personalizadas",
+    "descripcion": "Desarrollar una aplicación que permita a los usuarios buscar recetas según ingredientes que tienen en casa. La app también permitirá a los usuarios guardar sus recetas favoritas y agregar comentarios.",
+    "objetivos": [
+        "Búsqueda de Recetas por Ingredientes: Los usuarios pueden buscar recetas ingresando los ingredientes disponibles.",
+        "Favoritos y Comentarios: Permitir que los usuarios guarden recetas en su perfil y puedan comentar sobre ellas.",
+        "Interfaz Amigable: Diseñar una app fácil de usar, tanto en dispositivos móviles como de escritorio.",
+        "Integración de una API de Recetas: Usar una API como Spoonacular para obtener datos sobre recetas.",
+        "Perfil de Usuario: Permitir a los usuarios registrarse e iniciar sesión para personalizar su experiencia."
+    ]
+}
+]

@@ -44,16 +44,16 @@ export default function Profile( {setChange} ) {
                 <div className="flex items-center justify-end mt-10 ">
                     <button 
                     type="submit"
-                    className="bg-logo text-white px-5 py-3 flex items-center rounded-lg transition-all duration-300 ease-in-out"
+                    className="bg-borderSubmit text-[#1F076E] px-5 py-3 flex items-center rounded-lg transition-all duration-300 ease-in-out"
                     onClick={() => {
                         setChange[0]("Equipo");
                         setChange[1](true);
                     }}
                     >
-                        <span>
+                        <span className="font-semibold">
                             Continuar
                         </span>
-                        <img className="w-4 ml-2" src="/images/arrow.png" alt="" />
+                        <img className="w-4 ml-2" src={`/images/arrowViolet.png`} alt="" />
                     </button>
                 </div>
                 

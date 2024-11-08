@@ -72,7 +72,7 @@ export default function SelectProyect() {
 
                         {change === "Equipo" &&
                         <> 
-                        <div className="max-sm:w-full sm:max-w-[800px] flex flex-wrap justify-evenly gap-5 sm:max-h-[420px] sm:overflow-auto sm:pb-5">
+                        <div className="max-sm:w-full sm:max-w-[800px] flex flex-wrap gap-5 sm:max-h-[420px] sm:overflow-auto sm:pb-5">
                             <PersonCard
                             name={"Pepe"}
                             role={"Desarrollador Frontend"}
@@ -139,16 +139,16 @@ export default function SelectProyect() {
                         <div className="flex justify-end py-5 pr-5 max-sm:py-10">
                             <button 
                             type="submit"
-                            className="bg-logo text-white px-5 py-3 flex items-center rounded-lg transition-all duration-300 ease-in-out"
+                            className="bg-borderSubmit text-[#1F076E] px-5 py-3 flex items-center rounded-lg transition-all duration-300 ease-in-out"
                             onClick={() => {
                                 setChange("Proyectos");
                                 setEquipo(true);
                             }}
                             >
-                                <span>
+                                <span className="font-semibold">
                                     Continuar
                                 </span>
-                                <img className="w-4 ml-2" src="/images/arrow.png" alt="" />
+                                <img className="w-4 ml-2" src="/images/arrowViolet.png" alt="" />
                             </button>
                         </div>
                         </>
@@ -176,6 +176,7 @@ export default function SelectProyect() {
             
             {!render && (
                 <div>
+                    <img src="/" alt="" />
                     <h1><b>Cool</b>abora!</h1>
                 </div>
             )}

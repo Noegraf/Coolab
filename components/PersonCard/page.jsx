@@ -1,6 +1,6 @@
 export default function PersonCard({ name, role, img, email, github, linkedin }){
     return(
-        <article className="flex flex-col bg-white rounded-lg shadow-lg max-w-[320px] max-sm:w-full h-[250px]">
+        <article className="flex flex-col bg-white rounded-lg shadow-lg max-w-[245px] max-sm:w-full h-[250px]">
             <div className="flex items-center justify-between px-5 py-5">
                 <img className="w-[70px]" src={img} alt="" />
                 <h1 className="text-2xl text-lilatext font-bold">{name}</h1>

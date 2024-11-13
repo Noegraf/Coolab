@@ -1,3 +1,4 @@
+"use client";
 import Profile from "@/components/Profile/page";
 import Button from "../Button/page";
 import { useEffect, useState } from "react";
@@ -7,28 +8,42 @@ import CardTaskResponsive from "../CardTaskResponsive/page";
 import PersonCard from "../PersonCard/page";
 import Project from "../Project/page";
 import data from "../../data/projects.json";
+import { useRouter } from "next/navigation";
 export default function SelectProyect() {
+    const router = useRouter();
     const [change, setChange] = useState("Mi perfil");
     const [perfil, setPerfil] = useState(false);
     const [equipo, setEquipo] = useState(false);
     const [proyectos, setProyectos] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
-    const [animationBottom, setAnimationBottom] = useState("");
+    const [animation, setAnimation] = useState("animation");
     const [render, setRender] = useState(true);
+    const [image, setImage] = useState("/images/pieza.png");
 
     useEffect(() => {
         if (isClicked){
-            setTimeout(() => {
-                setAnimationBottom("animationBottom");
-            }, 1000);
+            setTimeout(() => setAnimation("animationBottom"), 1000);
 
             setTimeout(() => {
                 setRender(false);
+                setAnimation("animation max-sm:flex justify-center items-center max-sm:h-full");
             }, 1900);
+
+            setTimeout(() => setImage("/images/brillo.png"), 2500);
+            setTimeout(() => setImage("/images/trianglePink.png"), 3000);
+            setTimeout(() => setImage("/images/triangleLightViolet.png"), 3500);
+            setTimeout(() => setImage("/images/triangleViolet.png"), 4000);
+            setTimeout(() => setImage("/images/checkAnimation.png"), 4500);
+
+            setTimeout(() => {
+                if (typeof window !== "undefined") {
+                    router.push("/dashboard");
+                }
+            }, 5400);
         }
-    },[isClicked])
+    },[isClicked, router])
     return(
-        <section className={`w-svw sm:flex animation ${animationBottom}`}>
+        <section className={`w-vw sm:flex  ${animation}`}>
             {render && (
                 <>
                     <div className="sm:hidden">
@@ -72,7 +87,7 @@ export default function SelectProyect() {
 
                         {change === "Equipo" &&
                         <> 
-                        <div className="max-sm:w-full sm:max-w-[800px] flex flex-wrap gap-5 sm:max-h-[420px] sm:overflow-auto sm:pb-5">
+                        <div className="max-sm:w-full sm:max-w-[800px] flex max-sm:justify-center flex-wrap gap-5 sm:max-h-[420px] sm:overflow-auto sm:pb-5">
                             <PersonCard
                             name={"Pepe"}
                             role={"Desarrollador Frontend"}
@@ -174,10 +189,12 @@ export default function SelectProyect() {
                 </>
             )}
             
-            {!render && (
-                <div>
-                    <img src="/" alt="" />
-                    <h1><b>Cool</b>abora!</h1>
+            {render == false && (
+                <div className="flex flex-col items-center gap-5">
+                    <div className="w-[80px] h-[80px] flex justify-center items-center">
+                        <img  src={image} alt="" />
+                    </div>
+                    <h1 className="font-extrabold text-7xl text-gray-500 max-sm:text-5xl"><b className="text-turquesa">Cool</b>abora!</h1>
                 </div>
             )}
         </section>

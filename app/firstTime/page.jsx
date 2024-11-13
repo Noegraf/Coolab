@@ -3,6 +3,7 @@ import Welcome from "@/components/Welcome/page";
 import { useEffect, useState } from "react";
 import "./styles.css";
 import SelectProyect from "@/components/SelectProyect/page";
+import NavBar from "@/components/navBar/page";
 
 export default function FirstTime() {
     const [animation, setAnimation] = useState("");
@@ -19,17 +20,9 @@ export default function FirstTime() {
 
     return (
         <main className={`bg-backgroundFirstTime w-dvw h-dvh ${visible ? "flex justify-center items-center" : "sm:flex sm:justify-center sm:items-center"} overflow-x-hidden overflow-y-hidden px-9 max-sm:px-0 max-sm:overflow-y-auto max-sm:py-[100px]`}>
-            <nav className="fixed top-0 flex justify-between items-center w-full py-3 max-sm:py-[1vh] px-7 z-20 bg-backgroundFirstTime max-sm:shadow">
-                <img 
-                src="/images/logo2.png" 
-                alt="" 
-                className=""
-                />
-                <h1 className="text-blackLila font-bold text-3xl max-sm:text-xl mx-5 text-center">Primer ingreso</h1>
-                <div className="bg-containerSubmit p-2 rounded-lg">
-                    <img src="/images/person.png" alt="" />
-                </div>
-            </nav>
+            <NavBar
+            name="Primer ingreso"
+            />
 
             {visible ?(
                 <>

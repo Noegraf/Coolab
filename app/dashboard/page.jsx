@@ -1,3 +1,4 @@
+"use client";
 import NavBar from "@/components/NavBar/page";
 import ProjectSelected from "@/components/ProjectSelected/page";
 import data from "../../data/projects.json";

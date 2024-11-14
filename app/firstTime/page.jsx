@@ -3,7 +3,7 @@ import Welcome from "@/components/Welcome/page";
 import { useEffect, useState } from "react";
 import "./styles.css";
 import SelectProyect from "@/components/SelectProyect/page";
-import NavBar from "@/components/navBar/page";
+import NavBar from "@/components/NavBar/page";
 
 export default function FirstTime() {
     const [animation, setAnimation] = useState("");
